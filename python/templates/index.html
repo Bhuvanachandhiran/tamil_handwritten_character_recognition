@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Handwritten Character Recognition</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        .error { color: red; }
+        .prediction { color: green; font-size: 24px; }
+        img { max-width: 200px; margin: 20px 0; }
+        input[type="file"] { margin: 10px 0; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tamil Handwritten Character Recognition</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept=".bmp" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        {% if prediction %}
+            <p class="prediction">Predicted Character: {{ prediction }}</p>
+        {% endif %}
+        {% if image %}
+            <img src="{{ image }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+</body>
+</html>
