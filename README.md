@@ -1,7 +1,7 @@
 # Tamil Handwritten Character Recognition 
 
 ## Overview
-Tamil-HistoScript-Net is a deep learning-based OCR system for recognizing handwritten Tamil characters using a CNN (TamilNet). Trained on the Kaggle Tamil Handwritten Character Recognition dataset, it supports 156 characters and is deployed via a Flask web app for real-time predictions.
+Tamil Handwritten Character Recognition  is a deep learning-based OCR system for recognizing handwritten Tamil characters using a CNN (TamilNet). Trained on the Kaggle Tamil Handwritten Character Recognition dataset, it supports 156 characters and is deployed via a Flask web app for real-time predictions.
 
 ## Dataset
 - **Source**: [Kaggle Tamil Handwritten Character Recognition](https://www.kaggle.com/datasets/gauravduttakiit/tamil-handwritten-character-recognition)
@@ -18,7 +18,6 @@ Tamil-HistoScript-Net is a deep learning-based OCR system for recognizing handwr
 ## Setup
 
 1. **Set Up Directory**:
-   - Place project in `D:\projects ai\tamil-handwritten-recognition`.
    - Structure:
      tamil-handwritten-recognition/
      ├── data/
@@ -46,22 +45,14 @@ Tamil-HistoScript-Net is a deep learning-based OCR system for recognizing handwr
 - **No Work History**: Excludes detailed project history, focusing only on essential setup and usage.
 
 ### Next Steps
-1. **Save README**:
-   - Copy the Markdown content to `D:\projects ai\tamil-handwritten-recognition\README.md`.
-2. **Fix Test Data**:
+ **Fix Test Data**:
    - Run the provided `test.csv` update script to align with `data/test` filenames.
    - Verify with: `dir "data\test\0" & type "data\test.csv" | more`.
-3. **Run Pipeline**:
+ **Run Pipeline**:
    ```cmd
    python python/train.py
    python python/evaluate.py
    python python/app.py
-2 . **Download Dataset**:
-  ```cmd
-  cd /d "D:\projects ai\tamil-handwritten-recognition"
-  xcopy kaggle_dataset\train data\train /E /I
-  xcopy kaggle_dataset\test data\test /E /I
-  copy kaggle_dataset\test.csv data\test.csv
 
 
 
