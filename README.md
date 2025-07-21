@@ -1,4 +1,4 @@
-# Tamil Handwritten Character Recognition (Tamil-HistoScript-Net)
+# Tamil Handwritten Character Recognition 
 
 ## Overview
 Tamil-HistoScript-Net is a deep learning-based OCR system for recognizing handwritten Tamil characters using a CNN (TamilNet). Trained on the Kaggle Tamil Handwritten Character Recognition dataset, it supports 156 characters and is deployed via a Flask web app for real-time predictions.
